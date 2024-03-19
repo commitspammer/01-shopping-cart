@@ -1,3 +1,5 @@
+//import { ReactNode } from 'react'
+
 //export type ItemListProps {
 //    items: {
 //        name: string,
@@ -10,23 +12,22 @@
 export default function ItemList(props) {
     const itemList = props.items.map(i => <>
         <hr/>
-        <li class="flex flex-row gap-4 items-center py-2">
-            <img class="rounded-lg" src="https://picsum.photos/70/70"/>
-            <div class="flex-1">
-                <p class="text-xl">{ i.name }</p>
-                <p class="text-sm">{ i.description }</p>
-                <p class="text-sm">R$ { i.price }</p>
+        <li className="flex flex-row gap-4 items-center py-2">
+            <img className="rounded-lg" src="https://picsum.photos/70/70"/>
+            <div className="flex-1">
+                <p className="text-xl">{ i.name }</p>
+                <p className="text-sm">{ i.description }</p>
+                <p className="text-sm">R$ { i.price }</p>
             </div>
-            <div class="flex flex-col">
-                <button><i class="fa-solid fa-plus"/></button>
-                <button><i class="fa-solid fa-minus"/></button>
+            <div className="flex flex-col">
+                <button><i className="fa-solid fa-plus"/></button>
+                <button><i className="fa-solid fa-minus"/></button>
             </div>
             <div>x{ i.quantity }</div>
             <div>R$ { +(i.price * i.quantity).toFixed(2) }</div>
-            <button><i class="fa-solid fa-trash"/></button>
+            <button><i className="fa-solid fa-trash"/></button>
         </li>
     </>)
-    //<b>{ i.name }</b> { i.description } R${ i.price } x{ i.quantity }
 
     return <ul>
         { itemList }

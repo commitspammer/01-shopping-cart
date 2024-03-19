@@ -25,13 +25,13 @@ function App() {
     ]
 
     return <>
-        <div class="flex flex-row container mx-auto gap-x-4 p-12">
-            <div class="w-3/4">
-                <Header/>
-                <div class="h-4"/>
+        <div className="flex flex-row container mx-auto gap-x-4 p-12">
+            <div className="w-3/4">
+                <Header itemCount={items.length}/>
+                <div className="h-4"/>
                 <ItemList items={items}/>
             </div>
-            <div class="w-1/4 bg-sky-500 rounded-lg">
+            <div className="w-1/4 bg-sky-700 rounded-lg">
             </div>
         </div>
     </>
