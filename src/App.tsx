@@ -1,7 +1,6 @@
 import Header from './lib/Header.tsx'
 import ItemList from './lib/ItemList.tsx'
 
-// try .place-items-stretch
 function App() {
     const items = [
         {
@@ -24,6 +23,7 @@ function App() {
         },
     ]
 
+    // try ".place-items-stretch"
     return <>
         <div className="flex flex-row container mx-auto gap-x-4 p-12">
             <div className="w-3/4">
